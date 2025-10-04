@@ -2,9 +2,9 @@ import React from 'react'
 
 const Navbar = () => {
     const links = <>
-    <li className='m-2'>Home</li>
-    <li className='m-2'>Listed Books</li>
-    <li className='m-2'>Pages to Read</li>
+        <li className='m-2'>Home</li>
+        <li className='m-2'>Listed Books</li>
+        <li className='m-2'>Pages to Read</li>
     </>
     return (
         <div className="max-w-7xl mx-auto px-10 navbar bg-base-100 shadow-sm">
@@ -21,13 +21,15 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
+                <a className="text-2xl font-bold text-green-700">
+                    Book<span className="text-gray-900">Vibe</span>
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {
-                            links
-                        }
+                        links
+                    }
                 </ul>
             </div>
             <div className="navbar-end gap-4">
