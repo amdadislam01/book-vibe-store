@@ -7,8 +7,8 @@ const Footer = () => {
 
                 {/* Brand */}
                 <div>
-                    <h2 className="text-2xl font-bold text-green-700">
-                        Book<span className="text-gray-900">Vibe</span>
+                    <h2 className="font-work text-2xl font-bold text-green-700">
+                        Book<span className="font-work text-gray-900">Vibe</span>
                     </h2>
                     <p className="mt-4 text-gray-600 text-sm leading-relaxed">
                         Explore a world of books that inspire, entertain, and help you grow.
