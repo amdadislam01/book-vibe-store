@@ -5,11 +5,15 @@ import ErrorPage from '../pages/Error/ErrorPage';
 import Home from '../pages/Home/Home';
 
 export const router = createBrowserRouter([
-  { path: "/", Component: Root , errorElement: <ErrorPage />,
+  {
+    path: "/", Component: Root, errorElement: <ErrorPage />,
     children: [
-        {
-            index: true, path: '/', Component: Home
-        }
+      {
+        index: true, 
+        loader: () => fetch('booksData.json'), 
+        path: '/', 
+        Component: Home
+      }
     ]
-   },
+  },
 ]);
