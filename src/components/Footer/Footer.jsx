@@ -18,7 +18,7 @@ const Footer = () => {
 
                 {/* Quick Links */}
                 <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 font-work">Quick Links</h3>
                     <ul className="space-y-2">
                         <li><a href="#" className="hover:text-green-600 transition">Home</a></li>
                         <li><a href="#" className="hover:text-green-600 transition">Books</a></li>
@@ -29,7 +29,7 @@ const Footer = () => {
 
                 {/* Newsletter */}
                 <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Stay Updated</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 font-work">Stay Updated</h3>
                     <p className="text-gray-600 text-sm mb-4">
                         Subscribe to get the latest book updates and reading tips.
                     </p>
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom */}
-            <div className="border-t border-gray-200 mt-10 pt-6 text-center text-gray-500 text-sm">
+            <div className="border-t border-gray-200 mt-10 pt-6 text-center font-work text-gray-500 text-sm">
                 © {new Date().getFullYear()} BookVibe. All rights reserved.
             </div>
         </footer>

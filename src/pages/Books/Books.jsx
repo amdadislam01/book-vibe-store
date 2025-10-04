@@ -1,0 +1,60 @@
+import React, { useEffect, useState } from 'react'
+import bookimg from '/pngwing 1.png'
+import {StarIcon} from 'lucide-react'
+
+const Books = () => {
+    const [allBooks, setAllBooks] = useState([]);
+
+    useEffect(() => {
+        fetch('/booksData.json')
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+    },[])
+    return (
+        <div className="max-w-7xl mx-auto px-10">
+            <h1 className='text-4xl text-center py-10 font-bold'>Books</h1>
+            <div className="max-w-xs bg-white rounded-2xl shadow-md border border-gray-200 p-4">
+                {/* Book Image with Background */}
+                <div className="bg-green-50 rounded-lg p-6 flex justify-center">
+                    <img
+                        src={bookimg}
+                        alt="Book"
+                        className="w-32 h-40 object-cover"
+                    />
+                </div>
+
+                {/* Tags */}
+                <div className="flex justify-center gap-2 mt-4 flex-wrap">
+                    <span className="px-3 py-1 text-sm font-bold rounded-full bg-green-50 text-green-700">
+                        Young Adult
+                    </span>
+                    <span className="px-3 py-1 text-sm font-bold rounded-full bg-green-50 text-green-700">
+                        Identity
+                    </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-center mt-4">
+                    The Catcher in the Rye
+                </h3>
+
+                {/* Author */}
+                <p className="text-sm text-gray-600 text-center mt-1">
+                    By : <span className="font-medium">Awlad Hossain</span>
+                </p>
+
+                {/* Bottom Row */}
+                <div className="flex justify-between items-center mt-4 border-t border-dashed pt-3 text-sm text-gray-600">
+                    <span>Fiction</span>
+                    <div className="flex items-center gap-1">
+                        <span className="font-semibold text-gray-800">5.00</span>
+                       <StarIcon size={16} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
+export default Books
