@@ -31,7 +31,7 @@ const addToStoreBook = (id) => {
     }
 };
 
-// ✅ Remove function
+//  Remove function
 const removeFromStoreBook = (id) => {
     const storedBookData = getStoredBook();
     const updatedData = storedBookData.filter(bookId => bookId !== id);
