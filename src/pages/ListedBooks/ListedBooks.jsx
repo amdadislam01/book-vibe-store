@@ -20,6 +20,14 @@ const ListedBooks = () => {
 
     const handleSort = (type) => {
         setSort(type)
+        if (type === "pages") {
+            const sortedByPage = [...bookReadList].sort((a,b) => a.totalPages - b.totalPages);
+            setBookReadList(sortedByPage);
+        }
+        if (type === "rating") {
+            const sortedByReating = [...bookReadList].sort((a,b) => a.rating - b.rating);
+            setBookReadList(sortedByReating);
+        }
     }
     return (
         <div className='max-w-7xl mx-auto px-10 py-10'>
@@ -28,7 +36,7 @@ const ListedBooks = () => {
             </div>
             <div className="flex justify-center items-center mt-6">
                 <div className="dropdown dropdown-bottom dropdown-center">
-                    <div tabIndex={0} role="button" className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm px-5 py-2 rounded-md ml-1 cursor-pointer">Sort By ⬇️</div>
+                    <div tabIndex={0} role="button" className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm px-5 py-2 rounded-md ml-1 cursor-pointer">Sort By {sort?sort : ""} ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li><a onClick={() => handleSort("pages")}>Pages</a></li>
                         <li><a onClick={() => handleSort("rating")}>Rating</a></li>

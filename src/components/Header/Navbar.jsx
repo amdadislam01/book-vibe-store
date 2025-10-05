@@ -1,12 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
     const links = (
         <>
-            <Link to={'/'} className="m-2 font-work">Home</Link>
-            <Link to={'/listed'} className="m-2 font-work">Listed Books</Link>
-            <Link to={'/read'} className="m-2 font-work">Pages to Read</Link>
+            <NavLink to={'/'} className={({ isActive }) =>
+                isActive
+                    ? "text-green-600 font-semibold border border-green-600 rounded-md px-3 py-2"
+                    : "text-gray-700 font-work hover:text-green-600 px-3 py-2 rounded-md transition"
+            }>Home</NavLink>
+            <NavLink to={'/listed'} className={({ isActive }) =>
+                isActive
+                    ? "text-green-600 font-semibold border border-green-600 rounded-md px-3 py-2"
+                    : "text-gray-700 font-work hover:text-green-600 px-3 py-2 rounded-md transition"
+            }>Listed Books</NavLink>
+            <NavLink to={'/read'} className={({ isActive }) =>
+                isActive
+                    ? "text-green-600 font-semibold border border-green-600 rounded-md px-3 py-2"
+                    : "text-gray-700 font-work hover:text-green-600 px-3 py-2 rounded-md transition"
+            }>Pages to Read</NavLink>
         </>
     );
 
