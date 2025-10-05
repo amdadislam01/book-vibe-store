@@ -1,10 +1,10 @@
-import React, {  useState } from 'react'
+import React from 'react'
 import bookimg from '/pngwing 1.png'
 import Book from '../Book/Book';
 
 const Books = ({ data }) => {
-    const [allBooks, setAllBooks] = useState([]);
-
+    // console.log(data);
+    
     // useEffect(() => {
     //     fetch('/booksData.json')
     //     .then((res) => res.json())

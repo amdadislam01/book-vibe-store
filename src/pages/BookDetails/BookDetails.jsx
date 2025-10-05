@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router'
+import { addToStoreBook } from '../../Utility/addToDB';
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -7,6 +8,15 @@ const BookDetails = () => {
     const data = useLoaderData();
     const singleBook = data.find((book) => book.bookId === bookId)
     const { bookName, image, author, rating, category, tags, review, yearOfPublishing, publisher, totalPages } = singleBook;
+
+    const handleMarksAsRead = id => {
+        // Store with Id
+        // Were to store 
+        // array or collection
+        // if book already exist the slow a alart
+        // if book not exist then push in the collection or array
+        addToStoreBook(id);
+    }
 
 
     return (
@@ -17,7 +27,7 @@ const BookDetails = () => {
                     <img
                         src={image}
                         alt="Book"
-                        className="w-64 h-auto object-cover drop-shadow-md"
+                        className="w-66 h-auto object-cover shadow-md drop-shadow-md"
                     />
                 </div>
 
@@ -77,7 +87,7 @@ const BookDetails = () => {
                     </div>
                     {/* Buttons */}
                     <div className="flex gap-4 mt-6">
-                        <button className="px-6 py-2 border rounded-md hover:bg-gray-100 transition">
+                        <button onClick={() => handleMarksAsRead(id)} className="px-6 py-2 border rounded-md hover:bg-gray-100 transition">
                             Read
                         </button>
                         <button className="px-6 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-md transition">

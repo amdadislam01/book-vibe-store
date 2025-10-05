@@ -8,23 +8,24 @@ import BookDetails from '../pages/BookDetails/BookDetails';
 
 export const router = createBrowserRouter([
   {
-    path: "/", Component: Root, errorElement: <ErrorPage />,
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        index: true, 
-        loader: () => fetch('booksData.json'), 
-        path: '/', 
-        Component: Home
+        index: true,
+        loader: () => fetch('/booksData.json'), 
+        element: <Home />
       },
       {
-        path: '/listed', 
-        Component: ListedBooks
+        path: '/listed',
+        element: <ListedBooks />
       },
       {
         path: '/bookDetails/:id',
-        loader: () => fetch('booksData.json'), 
-        Component: BookDetails
+        loader: () => fetch('/booksData.json'),
+        element: <BookDetails />
       }
     ]
-  },
+  }
 ]);
