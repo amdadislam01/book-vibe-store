@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const links = (
         <>
-            <li className="m-2"><a className='font-work' href="#">Home</a></li>
-            <li className="m-2"><a className='font-work' href="#">Listed Books</a></li>
-            <li className="m-2"><a className='font-work' href="#">Pages to Read</a></li>
+            <Link to={'/'} className="m-2 font-work">Home</Link>
+            <Link to={'/listed'} className="m-2 font-work">Listed Books</Link>
+            <Link to={'/read'} className="m-2 font-work">Pages to Read</Link>
         </>
     );
 

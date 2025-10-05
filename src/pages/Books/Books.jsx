@@ -1,6 +1,5 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import bookimg from '/pngwing 1.png'
-import { StarIcon } from 'lucide-react'
 import Book from '../Book/Book';
 
 const Books = ({ data }) => {
@@ -18,15 +17,11 @@ const Books = ({ data }) => {
         <div className="max-w-7xl mx-auto px-10">
             <h1 className='text-4xl text-center py-10 font-bold'>Books</h1>
 
-            <Suspense fallback={<p>Loader......</p>}>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                    {
-                        data.map((book) => <Book key={book.bookId} book={book} />)
-                    }
-                </div>
-            </Suspense>
-
-
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {
+                    data.map((book) => <Book key={book.bookId} book={book} />)
+                }
+            </div>
         </div>
 
     )
