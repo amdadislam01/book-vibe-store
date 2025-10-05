@@ -1,6 +1,10 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router'
 import { addToStoreBook } from '../../Utility/addToDB';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -15,6 +19,25 @@ const BookDetails = () => {
         // array or collection
         // if book already exist the slow a alart
         // if book not exist then push in the collection or array
+
+        Swal.fire({
+            title: "Do you want to read this book?",
+            text: "Once you start, it will be added to your reading list!",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, start reading!",
+            cancelButtonText: "Maybe later"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Added!",
+                    text: "The book is now in your reading list.",
+                    icon: "success"
+                });
+            }
+        });
         addToStoreBook(id);
     }
 
