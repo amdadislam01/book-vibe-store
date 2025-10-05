@@ -23,7 +23,7 @@ const BookDetails = () => {
         <div className='mt-10 md:mt-20'>
             <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left Side - Book Image */}
-                <div className="bg-gray-100 p-6 rounded-2xl flex justify-center items-center">
+                <div className="bg-green-50 p-6 rounded-2xl flex justify-center items-center">
                     <img
                         src={image}
                         alt="Book"
