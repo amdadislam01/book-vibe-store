@@ -1,5 +1,6 @@
 import React from 'react'
 import bookimg from '/pngwing 1.png'
+import { Link } from 'react-router'
 
 const Banner = () => {
     return (
@@ -13,9 +14,9 @@ const Banner = () => {
                     <p className="text-gray-600 text-lg md:text-xl">
                         Discover a handpicked collection of books that will inspire, entertain, and expand your horizons.
                     </p>
-                    <button className="font-work px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-md cursor-pointer shadow-md transition duration-300 active:scale-95">
+                    <Link to={'/listed'} className="font-work px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-md cursor-pointer shadow-md transition duration-300 active:scale-95">
                         View The List
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Right Image */}
