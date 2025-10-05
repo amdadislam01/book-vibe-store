@@ -110,10 +110,10 @@ const BookDetails = () => {
                     </div>
                     {/* Buttons */}
                     <div className="flex gap-4 mt-6">
-                        <button onClick={() => handleMarksAsRead(id)} className="px-6 py-2 border rounded-md hover:bg-gray-100 transition">
+                        <button onClick={() => handleMarksAsRead(id)} className="px-6 py-2 border rounded-md hover:bg-black hover:text-white transition cursor-pointer">
                             Read
                         </button>
-                        <button className="px-6 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-md transition">
+                        <button className="px-6 py-2 bg-sky-500 hover:bg-gray-600 text-white rounded-md transition cursor-pointer">
                             Wishlist
                         </button>
                     </div>

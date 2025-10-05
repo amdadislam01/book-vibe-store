@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredBook, removeFromStoreBook } from '../../Utility/addToDB';
@@ -112,21 +112,21 @@ const ListedBooks = () => {
 
                                             {/* Bottom Section */}
                                             <div className="flex flex-wrap items-center gap-4 pt-2">
-                                                <span className="text-blue-600 font-medium">
+                                                <span className="bg-blue-100 px-3 py-1 rounded-full text-blue-600 font-medium">
                                                     Category: {rbook.category}
                                                 </span>
                                                 <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
                                                     Rating: {rbook.rating}
                                                 </span>
 
-                                                <button className="ml-auto bg-green-600 hover:bg-green-700 text-white text-sm px-5 py-2 rounded-full font-medium transition">
+                                                <Link to={`/BookDetails/${rbook.bookId}`} className="ml-auto bg-green-600 hover:bg-green-700 text-white text-sm px-5 py-2 rounded-full font-medium transition cursor-pointer">
                                                     View Details
-                                                </button>
+                                                </Link>
 
                                                 {/* Delete Button */}
                                                 <button
                                                     onClick={() => handleDelete(rbook.bookId)}
-                                                    className="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium flex items-center gap-2 transition"
+                                                    className="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-full font-medium flex items-center gap-2 transition cursor-pointer"
                                                 >
                                                     <FaTrash /> Delete
                                                 </button>
