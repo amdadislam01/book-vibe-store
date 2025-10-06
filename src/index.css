@@ -13,6 +13,7 @@
 * {
   font-family: var(--font-playfair);
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .font-work {
   font-family: var(--font-worksans);
