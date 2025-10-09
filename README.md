@@ -1,8 +1,9 @@
 # Book Vibe Store
 
 > **Project:** Book Vibe Store (Frontend)
-> **Author:** MD. Amdad Islam
+> </br>
 > **Repository:** [https://github.com/amdadislam01/book-vibe-store](https://github.com/amdadislam01/book-vibe-store)
+> </br>
 > **Live Demo:** *[Add live demo link once deployed]*
 
 ---
