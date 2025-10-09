@@ -49,7 +49,7 @@ const Footer = () => {
             {/* Bottom */}
             <div className="border-t border-gray-200 mt-10 pt-6 text-center font-work text-gray-500 text-sm">
                 © {new Date().getFullYear()} BookVibe. All rights reserved.
-                <p className='text-gray-600 text-center'>Developed By Amdad Islam</p>
+                <p className='text-gray-600 text-center'>Developed By <span className='font-bold'>Amdad Islam</span></p>
             </div>
         </footer>
 
