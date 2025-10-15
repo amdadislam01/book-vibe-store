@@ -1,4 +1,4 @@
-# Book Vibe Stor
+# Book Vibe Store
 
 > **Project:** Book Vibe Store (Frontend)
 > </br>
